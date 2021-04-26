@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label">User</label>
+                <input class="form-control" type="text" [formControl]="name">
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <button type="button" (click)="onGoButton()" class="btn-sm btn btn-primary" [disabled]="name.invalid">Go!</button>
+            </div>
+        </div>
+    </div>
+</div>
