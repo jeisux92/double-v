@@ -1,13 +1,20 @@
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
             <user-search (onSearch)="onSearch($event)"></user-search>
         </div>
-        <div class="col-6">
-            <ng-template [ngIf]="users.length > 0">
+
+    </div>
+    <br>
+    <ng-template [ngIf]="users.length > 0">
+        <div class="row">
+            <div class="col-12 col-sm-6">
                 <user-list [users]="users">
                 </user-list>
-            </ng-template>
+            </div>
+            <div class="col-12 col-sm-6">
+                <user-graph [users]="users"></user-graph>
+            </div>
         </div>
-    </div>
+    </ng-template>
 </div>

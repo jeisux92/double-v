@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
+
   @Input() users: any[] = [];
 
   constructor() { }
-
   ngOnInit(): void {
-  }
 
+  }
 }

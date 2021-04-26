@@ -7,11 +7,14 @@ import { environment } from '../../environments/environment';
 })
 export class UserService {
 
+  users = []
   constructor(private httpClient: HttpClient) { }
 
 
-  getUsers(user: String) {
-    return this.httpClient.get(`${environment.apiUrl}/search/users?q=${user}`).toPromise<any>()
+  async getUsers(user: String) {
+    const response = await this.httpClient.get(`${environment.apiUrl}/search/users?q=${user}`).toPromise<any>()
+    this.users = response.items.splice(0, 10);
+    return this.users;
   }
 
   getUser(user: String | null) {

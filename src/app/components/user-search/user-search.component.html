@@ -1,9 +1,9 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
     <div class="card-body">
         <div class="row">
             <div class="mb-3">
                 <label class="form-label">User</label>
-                <input class="form-control" type="text" [formControl]="name">
+                <input class="form-control" type="text" [formControl]="name" (keyup.enter)="!name.invalid && onGoButton()">
             </div>
             
         </div>

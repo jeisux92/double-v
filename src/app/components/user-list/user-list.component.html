@@ -1,5 +1,7 @@
 <ul class="list-group">
-    <li *ngFor="let user of users;index as i" class="list-group-item d-flex justify-content-between align-items-center">
-        <a [routerLink]="['/user', user.login]">{{user.login}}</a>
-    </li>
+    <li *ngFor="let user of users;index as i" class="list-group-item d-flex justify-content-between align-items-center"
+    >
+    <a [routerLink]="['/user', user.login]">{{user.login}}</a>
+</li>
+<!-- [class]="user.score<30?'disabled':''" -->
 </ul>

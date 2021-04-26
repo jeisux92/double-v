@@ -19,6 +19,6 @@ export class HomeComponent implements OnInit {
 
   async onSearch(user: String) {
     const result = await this.userService.getUsers(user);
-    this.users = result.items.splice(0,10);
+    this.users = result;
   }
 }
